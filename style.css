@@ -1,0 +1,304 @@
+/* ==========================================================================
+   National Institute of Fundamental Studies (NIFS), Sri Lanka
+   Clean, Minimal & Professional Maintenance Page
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 620px;
+  text-align: center;
+}
+
+/* ==========================================
+   Logo Section (Static & Crisp)
+   ========================================== */
+.logo-area {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 92px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ==========================================
+   Institutional Headings
+   ========================================== */
+.institute-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.institute-country {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0284c7;
+  letter-spacing: 0.16em;
+  margin-top: 0.25rem;
+}
+
+/* ==========================================
+   Expanding Animated Divider
+   ========================================== */
+.divider {
+  width: 52px;
+  height: 3px;
+  background: linear-gradient(90deg, #0284c7, #38bdf8);
+  margin: 1.75rem auto;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  animation: shimmer 3.5s infinite;
+}
+
+/* ==========================================
+   Main Message
+   ========================================== */
+.main-heading {
+  font-size: clamp(1.65rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.85rem;
+}
+
+.message {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+}
+
+/* ==========================================
+   Contact Box & Hover Interactions
+   ========================================== */
+.contact-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.6rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.92rem;
+  color: #334155;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.contact-box:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
+.contact-title {
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.contact-box p {
+  margin-bottom: 0.4rem;
+}
+
+.contact-box p:last-child {
+  margin-bottom: 0;
+}
+
+.interactive-link {
+  color: #0284c7;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.interactive-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #0284c7;
+  transition: width 0.25s ease;
+}
+
+.interactive-link:hover {
+  color: #0369a1;
+}
+
+.interactive-link:hover::after {
+  width: 100%;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+.footer {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.developed-by {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.dev-link {
+  color: #0f172a;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.dev-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: #0284c7;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dev-link:hover {
+  color: #0284c7;
+}
+
+.dev-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ==========================================
+   Inner Entrance Animations (Content Only)
+   ========================================== */
+.animate-fade-up-1 {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: enterUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.animate-expand {
+  transform: scaleX(0);
+  animation: expandLine 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+}
+
+.animate-fade-up-2 {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: enterUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+}
+
+.animate-fade-up-3 {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: enterUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+}
+
+.animate-fade-up-4 {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: enterUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.65s forwards;
+}
+
+.animate-fade-up-5 {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: enterUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+}
+
+@keyframes enterUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandLine {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  40%, 100% {
+    left: 100%;
+  }
+}
+
+/* ==========================================
+   Responsive Breakpoints
+   ========================================== */
+@media (max-width: 480px) {
+  body {
+    padding: 2rem 1rem;
+  }
+
+  .logo {
+    height: 75px;
+  }
+
+  .institute-title {
+    font-size: 0.95rem;
+  }
+
+  .main-heading {
+    font-size: 1.5rem;
+  }
+
+  .contact-box {
+    padding: 1.25rem 1rem;
+    font-size: 0.88rem;
+  }
+}
